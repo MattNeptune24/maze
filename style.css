@@ -1,0 +1,26 @@
+*{
+    text-align: center;
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: rgb(200,200,200);
+}
+
+body{
+    background-image: radial-gradient(rgb(70,70,85), rgb(50,50,50));
+}
+
+input[class="checkbox"]{
+    margin: 20px;
+    transform: scale(4);
+}
+
+input[class="checkbox2"]{
+    margin: 7px;
+    transform: scale(2);
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    background-image: radial-gradient(rgb(70,70,85), rgb(50,50,50));
+}
