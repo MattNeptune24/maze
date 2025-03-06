@@ -56,3 +56,7 @@ button {
     left: 0px;
     position: absolute;
 }
+
+.stats {
+    color: rgb(125, 125, 125);
+}
