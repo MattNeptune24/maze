@@ -1,8 +1,8 @@
 addEventListener("keydown", function(e){
-    if(e.code == "KeyA") vx = -4
-    if(e.code == "KeyS") vy = 4
-    if(e.code == "KeyW") vy = -4
-    if(e.code == "KeyD") vx = 4
+    if(e.code == "KeyA") vx = -5
+    if(e.code == "KeyS") vy = 5
+    if(e.code == "KeyW") vy = -5
+    if(e.code == "KeyD") vx = 5
 })
 
 addEventListener("keyup", function(e){
