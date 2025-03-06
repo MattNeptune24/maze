@@ -17,22 +17,22 @@ update()
 
 const tileW = 45;
 const tileH = 45;
-const gridRows = 11;
-const gridColumns = 11;
+const gridRows = 15;
+const gridColumns = 15;
 
 const canvas0 = document.getElementById('custom1').getContext ('2d');
 let map0 = [
-    1,1,1,1,1,1,1,1,1,1,1,
-    1,1,1,1,1,1,1,1,1,1,1,
-    0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,
-    0,2,0,0,0,0,0,0,0,3,0,
-    0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,
-    1,1,1,1,1,1,1,1,1,1,1,
-    1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,2,0,0,0,0,0,0,0,0,0,0,0,3,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 ]
 
 const updateAll = () =>{
@@ -70,6 +70,10 @@ const createMap = (map,canvas) => {
             }
             if(map[arrayIndex] === 5) {
                 canvas.fillStyle = "rgb(125,200,250)"
+                canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
+            }
+            if(map[arrayIndex] === 6) {
+                canvas.fillStyle = "rgb(150,125,200)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
         }
