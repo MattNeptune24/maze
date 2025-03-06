@@ -49,7 +49,7 @@ button {
 .button1 {
     width: 100px;
     height: 30px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .character{
@@ -59,4 +59,10 @@ button {
 
 .stats {
     color: rgb(125, 125, 125);
+}
+
+.mapData {
+    font-size: large;
+    width: 230px;
+    height: 260px;
 }
