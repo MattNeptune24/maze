@@ -48,31 +48,31 @@ const createMap = (map,canvas) => {
     for (let eachRow = 0; eachRow < gridRows; eachRow++) {
         for(let eachColumn = 0; eachColumn < gridColumns; eachColumn++) {
             let arrayIndex = eachRow * gridRows + eachColumn;
-            if(map[arrayIndex] === 0) {
+            if(map[arrayIndex] === 0 || map[arrayIndex] === "0") {
                 canvas.fillStyle = "rgb(175,175,175)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 1) {
+            if(map[arrayIndex] === 1 || map[arrayIndex] === "1") {
                 canvas.fillStyle = "rgb(150,150,150)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 2) {
+            if(map[arrayIndex] === 2 || map[arrayIndex] === "2") {
                 canvas.fillStyle = "rgb(125,225,125)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 3) {
+            if(map[arrayIndex] === 3 || map[arrayIndex] === "3") {
                 canvas.fillStyle = "rgb(225,125,125)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 4) {
+            if(map[arrayIndex] === 4 || map[arrayIndex] === "4") {
                 canvas.fillStyle = "rgb(225,150,100)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 5) {
+            if(map[arrayIndex] === 5 || map[arrayIndex] === "5") {
                 canvas.fillStyle = "rgb(125,200,250)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
-            if(map[arrayIndex] === 6) {
+            if(map[arrayIndex] === 6 || map[arrayIndex] === "6") {
                 canvas.fillStyle = "rgb(150,125,200)"
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
@@ -81,7 +81,7 @@ const createMap = (map,canvas) => {
 }
 
 document.getElementById("button1").onclick = function(){
-    var block = parseFloat(document.getElementById("block").value);
-    var blockType = parseFloat(document.getElementById("blockType").value);
-    map0[block-1] = blockType
+    var mapData = document.getElementById("mapData").value;
+    mapData = mapData.split(",")
+    map0 = mapData
 }
