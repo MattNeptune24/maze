@@ -1,0 +1,58 @@
+* {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(0,0,0);
+}
+
+body {
+    background-color: rgb(200,200,200)
+}
+
+h1 {
+    font-size: 50px;
+}
+
+button {
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
+}
+
+.main {
+    color: rgb(0,0,0);
+    background-color: rgb(125,250,150);
+}
+
+.community {
+    color: rgb(0,0,0);
+    background-color: rgb(125,200,250);
+}
+
+.weekly {
+    color: rgb(0,0,0);
+    background-color: rgb(250,150,125);
+}
+
+.editor {
+    color: rgb(0,0,0);
+    background-color: rgb(250,225,100);
+}
+
+.canvas {
+    top: 0px;
+    left: 220px;
+    position: fixed;
+    background-color: black;
+    opacity: 0.25;
+}
+
+.button1 {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+}
+
+.character{
+    left: 0px;
+    position: absolute;
+}
