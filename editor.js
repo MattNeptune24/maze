@@ -22,6 +22,7 @@ const gridColumns = 15;
 
 var color0 = "rgb(175,175,175)"
 var color1 = "rgb(150,150,150)"
+var color7 = "rgb(200,200,200)"
 
 const canvas0 = document.getElementById('custom1').getContext ('2d');
 let map0 = [
@@ -80,7 +81,7 @@ const createMap = (map,canvas) => {
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
             if(map[arrayIndex] === 7 || map[arrayIndex] === "7") {
-                canvas.fillStyle = "rgb(200,200,200)"
+                canvas.fillStyle = color7
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
         }
@@ -91,8 +92,10 @@ document.getElementById("button1").onclick = function(){
     var mapData = document.getElementById("mapData").value;
     var color0Text = document.getElementById("text0").value;
     var color1Text = document.getElementById("text1").value;
+    var color7Text = document.getElementById("text7").value;
     mapData = mapData.split(",")
     color0 = color0Text
     color1 = color1Text
+    color7 = color7Text
     map0 = mapData
 }
