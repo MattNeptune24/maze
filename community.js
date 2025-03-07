@@ -23,6 +23,7 @@ const gridColumns = 15;
 const canvas0 = document.getElementById('level0').getContext('2d');
 var colorA1 = "rgb(100,100,100)"
 var colorA2 = "rgb(75,75,75)"
+var colorA7 = "rgb(150,150,150)"
 const map0 = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -40,6 +41,7 @@ const map0 = [
 const canvas1 = document.getElementById('level1').getContext('2d');
 var colorB1 = "rgb(175,175,175)"
 var colorB2 = "rgb(150,150,150)"
+var colorB7 = "rgb(200,200,200)"
 const map1 = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -57,6 +59,7 @@ const map1 = [
 const canvas2 = document.getElementById('level2').getContext('2d');
 var colorC1 = "rgb(100,100,100)"
 var colorC2 = "rgb(75,75,75)"
+var colorC7 = "rgb(200,200,200)"
 const map2 = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -72,16 +75,16 @@ const map2 = [
 ]
 
 const updateAll = () =>{
-    createMap(map0,canvas0,colorA1,colorA2);
-    createMap(map1,canvas1,colorB1,colorB2);
-    createMap(map2,canvas2,colorC1,colorC2);
+    createMap(map0,canvas0,colorA1,colorA2,colorA7);
+    createMap(map1,canvas1,colorB1,colorB2,colorB7);
+    createMap(map2,canvas2,colorC1,colorC2,colorC7);
 }
 
 window.onload = () => {
     window. requestAnimationFrame(updateAll);
 }
 
-const createMap = (map,canvas,color1,color2) => {
+const createMap = (map,canvas,color1,color2,color7) => {
     for (let eachRow = 0; eachRow < gridRows; eachRow++) {
         for(let eachColumn = 0; eachColumn < gridColumns; eachColumn++) {
             let arrayIndex = eachRow * gridRows + eachColumn;
@@ -114,7 +117,7 @@ const createMap = (map,canvas,color1,color2) => {
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
             if(map[arrayIndex] === 7) {
-                canvas.fillStyle = "rgb(200,200,200)"
+                canvas.fillStyle = color7
                 canvas.fillRect(tileW*eachColumn,tileH * eachRow, tileW, tileH)
             }
         }
