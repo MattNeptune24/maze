@@ -59,7 +59,7 @@ const map1 = [
 const canvas2 = document.getElementById('level2').getContext('2d');
 var colorC1 = "rgb(100,100,100)"
 var colorC2 = "rgb(75,75,75)"
-var colorC7 = "rgb(200,200,200)"
+var colorC7 = "rgb(150,150,150)"
 const map2 = [
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
