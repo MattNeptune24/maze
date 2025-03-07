@@ -54,12 +54,6 @@ button {
     height: 260px;
 }
 
-.eventMap {
-    border-style: outset;
-    border-color: rgb(250,210,100);
-    border-width: 5px;
-}
-
 .key {
     font-size: x-small;
     color: rgb(125, 125, 125);
